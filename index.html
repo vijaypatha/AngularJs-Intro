@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="gemStore">
+<head>
+  <title></title>
+  <link rel="stylesheets" href = "Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+  <script type="text/javascript" src = "AngularJS/angular.min.js"></script>
+  <script type="text/javascript" src = "app.js"></script>
+</head>
+<body class="container" ng-controller = "StoreController as store"> <!--attaching controller to body -->
+  <div class="row" ng-repeat= "product in store.products">
+    <h1>{{store.product.name}}</h1>
+    <h2>{{store.product.price}}</h2>
+    <p> {{store.product.description}}
+    </p>
+    <button ng-show="store.product.canPurchase">Add to Cart</button>
+  </div>
+</body>
+</html>
